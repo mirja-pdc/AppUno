@@ -14,15 +14,16 @@ import {
 export class HomePage {
   constructor() {}
 
-  // INTERPOLACIÓN
+  // INTERPOLACIÓN: Valores de variables que se muestran en el template con {{}}
   titulo: string = 'Tarea de Aprendizaje 1';
   descripcion: string = 'Aprendiendo Ionic y Angular';
 
-// PROPERTY BINDING
+// PROPERTY BINDING: Variables que se enlazan a propiedades de elementos HTML con [propiedad]="variable"
 
-// EVENT BINDING
+// EVENT BINDING: Variables que se enlazan a eventos de elementos HTML con (evento)="funcion()"
 
 // ION-LIST Y LÓGICA
+
 
 }
 
