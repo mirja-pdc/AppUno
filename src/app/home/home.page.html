@@ -1,17 +1,20 @@
-<!-- INTERPOLACIÓN: {{ expresión }} muestra el valor de una propiedad -->
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
+      <!-- INTERPOLACIÓN: {{ expresión }} muestra el valor de una propiedad -->
       {{titulo}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <!-- INTERPOLACIÓN: {{ expresión }} muestra el valor de una propiedad -->
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Primera Aplicación Ionic-Angular</ion-card-title>
-      <ion-card-subtitle>Desarrollo de Interfaces</ion-card-subtitle>
+      <ion-card-title>Herramienta 1</ion-card-title>
+      <ion-card-subtitle>Interpolación</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
@@ -29,12 +32,100 @@
   </ion-card>
 
   <!-- PROPERTY BINDING [ ]: Vincula una propiedad del DOM a una variable -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Herramienta 2</ion-card-title>
+      <ion-card-subtitle>Property Binding</ion-card-subtitle>
+    </ion-card-header>
 
+    <ion-card-content>
+      <p>Vincula propiedades del componente a variables del TypeScript</p>
 
-  <!-- EVENT BINDING ( ): Escucha eventos del DOM y llama a métodos -->
+      <!-- [disabled]="botonDeshabilitado" deshabilita el botón si la variable es true -->
+      <ion-button [color]="colorBoton" [disabled]="botonDeshabilitado">
+        color-"{{colorBoton}}"
+      </ion-button>
 
+      <!-- (click) es event binding y cambia el valor de verdad de la variable boolean botonDeshabilitado -->
+      <ion-button [color]="secondary" (click)="botonDeshabilitado=!botonDeshabilitado">
+        <!-- Si botonDeshabilitado es true el botón muestra 'Habilitar', si es false 'Deshabilitar' -->
+        {{botonDeshabilitado ? 'Habilitar' : 'Deshabilitar'}}
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- EVENT BINDING ( ): Escucha eventos del DOM (de lo que hagamos en la app) y llama a métodos -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Herramienta 3</ion-card-title>
+      <ion-card-subtitle>Event Binding</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Contador: <strong>{{contador}}</strong></p>
+
+      <!-- Clickar el botón incrementa el contador -->
+      <ion-button [color]="colorBoton" (click)="incrementar()">
+        Incrementar Contador
+      </ion-button>
+
+      <!-- Clickar el botón reinicia el contador -->
+      <ion-button [color]="colorBoton" (click)="resetear()">
+        Resetear Contador
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 
   <!-- COMPONENTES IONIC: ion-list, ion-item, ion-avatar, ion-badge -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Herramienta 4</ion-card-title>
+      <ion-card-subtitle>Componentes Ionic: Ion-List con Bucle For</ion-card-subtitle>
+    </ion-card-header>
 
+    <ion-card-content>
+      <p>Lista de alumnos haciendo uso de for</p>
+    </ion-card-content>
+
+    <ion-list>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Herramienta 4</ion-card-title>
+      <ion-card-subtitle>Componentes Ionic: Ion-Item</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p></p>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Herramienta 4</ion-card-title>
+      <ion-card-subtitle>Componentes Ionic: Ion-Avatar</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p></p>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Herramienta 4</ion-card-title>
+      <ion-card-subtitle>Componentes Ionic: Ion-Badge</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p></p>
+    </ion-card-content>
+
+  </ion-card>
 
 </ion-content>
